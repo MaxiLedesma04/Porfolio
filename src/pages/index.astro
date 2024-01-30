@@ -16,10 +16,10 @@ import H2 from "../components/H2.astro";
 	<main>
 		<section class="hero">
 			<img
-			class="img-transformer"
-			src="./public/imagenes/MLtransform.png"
-			alt=""
-		/>
+				class="img-transformer"
+				src="./public/imagenes/MLtransform.png"
+				alt=""
+			/>
 			<h1>Porfolio <span class="text-gradient">Max</span></h1>
 		</section>
 		<div class="AboutMe-title">
@@ -27,23 +27,36 @@ import H2 from "../components/H2.astro";
 		</div>
 		<div class="AboutMe">
 			<img
-			class="AboutMe-fond"
-			src="./public/imagenes/background-AboutMe.jpg"
-			alt="Fondo About Me"
-		/>
-		<img class="AboutMe-img" src="./public/imagenes/yo-perfil.jpeg" alt="">
+				class="AboutMe-fond"
+				src="./public/imagenes/background-AboutMe.jpg"
+				alt="Fondo About Me"
+			/>
+			<img
+				class="AboutMe-img"
+				src="./public/imagenes/perfil-porfolio.jpeg"
+				alt=""
+			/>
 			<article class="AboutMe-article">
 				<p class="AboutMe-p">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Quisquam, quod. Quisquam, quod. Quisquam, quod.
+					Hola! soy Maximiliano, Desarrollador FullStack JAVA y
+					estudiante de Tecnicatura en Programación. Cuento con
+					experiencia en desarrollo de aplicaciones modernas y
+					competentes en el mercado, realizadas con herramientas como
+					HTML, CSS, JS, Vue.js, Axios, Boostrap, JAVA, Spring,
+					Gradel, entre otras. Siempre me encuentro en búsqueda de nuevos
+					retos y posiciones donde pueda demostrar mis habilidades y
+					hacerlas crecer.
 				</p>
 			</article>
 		</div>
 		<H2 title="My proyects" />
 		<div class="proyects">
-			<Card href="https://github.com/" title="Project 1" />
-			<Card href="https://github.com/" title="Project 2" />
-			<Card href="https://github.com/" title="Project 3" />
+			<Card href="https://github.com/" title="Homebanking" />
+			<Card href="https://github.com/" title="E-Comerce" />
+			<Card
+				href="https://github.com/"
+				title="Social-Networking(En desarrollo)"
+			/>
 		</div>
 		<H2 title="Contact me" />
 		<section class="contact">
@@ -166,9 +179,11 @@ import H2 from "../components/H2.astro";
 		position: absolute;
 		z-index: -1;
 	}
-	.AboutMe-img{
+	.AboutMe-img {
 		width: 15rem;
 		height: 20rem;
+		object-fit: contain;
+		border-radius: 10%;
 	}
 	.AboutMe-article {
 		width: 35rem;
@@ -177,6 +192,11 @@ import H2 from "../components/H2.astro";
 		display: flex;
 		border: 2px solid antiquewhite;
 		border-radius: 7%;
+		background: rgba(16, 10, 10, 0.26);
+		border-radius: 16px;
+		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+		backdrop-filter: blur(8.5px);
+		-webkit-backdrop-filter: blur(8.5px);
 	}
 	.AboutMe-p {
 		margin: 1.5rem;
@@ -205,7 +225,6 @@ import H2 from "../components/H2.astro";
 		border-radius: 5%;
 		padding: 10px;
 		padding-top: 0;
-
 	}
 	.contact h3 {
 		padding: 0;
@@ -220,15 +239,14 @@ import H2 from "../components/H2.astro";
 		display: flex;
 		justify-content: space-around;
 	}
-	@media screen and (max-width: 767px){
+	@media screen and (max-width: 767px) {
 		.hero {
 			flex-direction: column;
 		}
-		.main{
+		.main {
 			max-width: 200%;
 		}
 		.AboutMe {
-
 			flex-direction: column;
 			gap: 0;
 			align-items: center;
